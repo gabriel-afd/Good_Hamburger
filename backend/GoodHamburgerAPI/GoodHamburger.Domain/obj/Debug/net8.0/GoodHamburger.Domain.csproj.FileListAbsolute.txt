@@ -1,0 +1,11 @@
+F:\GoodHamburger\GoodHamburgerAPI\GoodHamburger.Domain\bin\Debug\net8.0\GoodHamburger.Domain.deps.json
+F:\GoodHamburger\GoodHamburgerAPI\GoodHamburger.Domain\bin\Debug\net8.0\GoodHamburger.Domain.dll
+F:\GoodHamburger\GoodHamburgerAPI\GoodHamburger.Domain\bin\Debug\net8.0\GoodHamburger.Domain.pdb
+F:\GoodHamburger\GoodHamburgerAPI\GoodHamburger.Domain\obj\Debug\net8.0\GoodHamburger.Domain.GeneratedMSBuildEditorConfig.editorconfig
+F:\GoodHamburger\GoodHamburgerAPI\GoodHamburger.Domain\obj\Debug\net8.0\GoodHamburger.Domain.AssemblyInfoInputs.cache
+F:\GoodHamburger\GoodHamburgerAPI\GoodHamburger.Domain\obj\Debug\net8.0\GoodHamburger.Domain.AssemblyInfo.cs
+F:\GoodHamburger\GoodHamburgerAPI\GoodHamburger.Domain\obj\Debug\net8.0\GoodHamburger.Domain.csproj.CoreCompileInputs.cache
+F:\GoodHamburger\GoodHamburgerAPI\GoodHamburger.Domain\obj\Debug\net8.0\GoodHamburger.Domain.dll
+F:\GoodHamburger\GoodHamburgerAPI\GoodHamburger.Domain\obj\Debug\net8.0\refint\GoodHamburger.Domain.dll
+F:\GoodHamburger\GoodHamburgerAPI\GoodHamburger.Domain\obj\Debug\net8.0\GoodHamburger.Domain.pdb
+F:\GoodHamburger\GoodHamburgerAPI\GoodHamburger.Domain\obj\Debug\net8.0\ref\GoodHamburger.Domain.dll

@@ -1,0 +1,15 @@
+F:\GoodHamburger\GoodHamburgerAPI\GoodHamburger.Application\obj\Debug\net8.0\GoodHamburger.Application.csproj.AssemblyReference.cache
+F:\GoodHamburger\GoodHamburgerAPI\GoodHamburger.Application\obj\Debug\net8.0\GoodHamburger.Application.GeneratedMSBuildEditorConfig.editorconfig
+F:\GoodHamburger\GoodHamburgerAPI\GoodHamburger.Application\obj\Debug\net8.0\GoodHamburger.Application.AssemblyInfoInputs.cache
+F:\GoodHamburger\GoodHamburgerAPI\GoodHamburger.Application\obj\Debug\net8.0\GoodHamburger.Application.AssemblyInfo.cs
+F:\GoodHamburger\GoodHamburgerAPI\GoodHamburger.Application\obj\Debug\net8.0\GoodHamburger.Application.csproj.CoreCompileInputs.cache
+F:\GoodHamburger\GoodHamburgerAPI\GoodHamburger.Application\bin\Debug\net8.0\GoodHamburger.Application.deps.json
+F:\GoodHamburger\GoodHamburgerAPI\GoodHamburger.Application\bin\Debug\net8.0\GoodHamburger.Application.dll
+F:\GoodHamburger\GoodHamburgerAPI\GoodHamburger.Application\bin\Debug\net8.0\GoodHamburger.Application.pdb
+F:\GoodHamburger\GoodHamburgerAPI\GoodHamburger.Application\bin\Debug\net8.0\GoodHamburger.Domain.dll
+F:\GoodHamburger\GoodHamburgerAPI\GoodHamburger.Application\bin\Debug\net8.0\GoodHamburger.Domain.pdb
+F:\GoodHamburger\GoodHamburgerAPI\GoodHamburger.Application\obj\Debug\net8.0\GoodHamb.630BA540.Up2Date
+F:\GoodHamburger\GoodHamburgerAPI\GoodHamburger.Application\obj\Debug\net8.0\GoodHamburger.Application.dll
+F:\GoodHamburger\GoodHamburgerAPI\GoodHamburger.Application\obj\Debug\net8.0\refint\GoodHamburger.Application.dll
+F:\GoodHamburger\GoodHamburgerAPI\GoodHamburger.Application\obj\Debug\net8.0\GoodHamburger.Application.pdb
+F:\GoodHamburger\GoodHamburgerAPI\GoodHamburger.Application\obj\Debug\net8.0\ref\GoodHamburger.Application.dll

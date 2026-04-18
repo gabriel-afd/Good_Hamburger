@@ -1,0 +1,19 @@
+﻿namespace GoodHamburger.Domain.Entities
+{
+    public class OrderItem
+    {
+        public Guid Id { get; set; }
+        public Guid OrderId { get; set; }
+        public Guid MenuItemId { get; set; }
+        public MenuItem MenuItem { get; set; } = null!;
+
+        private OrderItem() { }
+
+        public OrderItem(Guid menuItemId, MenuItem menuItem)
+        {
+            Id = Guid.NewGuid();
+            MenuItemId = menuItemId;
+            MenuItem = menuItem;
+        }
+    }
+}

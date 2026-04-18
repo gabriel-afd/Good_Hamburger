@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="GoodHamburger.Application/GoodHamburger.Application.csproj" />
+  <Project Path="GoodHamburger.Domain/GoodHamburger.Domain.csproj" />
+  <Project Path="GoodHamburger.Infra.Data/GoodHamburger.Infra.Data.csproj" />
+  <Project Path="GoodHamburger.Infra.IoC/GoodHamburger.Infra.IoC.csproj" />
+  <Project Path="GoodHamburgerAPI/GoodHamburgerAPI.csproj" />
+</Solution>
