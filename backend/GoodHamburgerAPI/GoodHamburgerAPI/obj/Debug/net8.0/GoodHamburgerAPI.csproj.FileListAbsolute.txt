@@ -308,7 +308,6 @@ F:\GoodHamburger\backend\GoodHamburgerAPI\GoodHamburgerAPI\obj\Debug\net8.0\refi
 F:\GoodHamburger\backend\GoodHamburgerAPI\GoodHamburgerAPI\obj\Debug\net8.0\GoodHamburgerAPI.pdb
 F:\GoodHamburger\backend\GoodHamburgerAPI\GoodHamburgerAPI\obj\Debug\net8.0\GoodHamburgerAPI.genruntimeconfig.cache
 F:\GoodHamburger\backend\GoodHamburgerAPI\GoodHamburgerAPI\obj\Debug\net8.0\ref\GoodHamburgerAPI.dll
-F:\GoodHamburger\backend\GoodHamburgerAPI\GoodHamburgerAPI\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 F:\GoodHamburger\backend\GoodHamburgerAPI\GoodHamburgerAPI\bin\Debug\net8.0\testhost.dll
 F:\GoodHamburger\backend\GoodHamburgerAPI\GoodHamburgerAPI\bin\Debug\net8.0\GoodHamburger.Tests.deps.json
 F:\GoodHamburger\backend\GoodHamburgerAPI\GoodHamburgerAPI\bin\Debug\net8.0\GoodHamburger.Tests.runtimeconfig.json

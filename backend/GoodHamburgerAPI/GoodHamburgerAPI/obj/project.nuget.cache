@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6dEcHw7EKrA=",
+  "dgSpecHash": "fWLJ7cDyQbM=",
   "success": true,
-  "projectFilePath": "F:\\GoodHamburger\\backend\\GoodHamburgerAPI\\GoodHamburgerAPI\\GoodHamburgerAPI.csproj",
+  "projectFilePath": "F:\\GoodHamburger\\backend\\GoodHamburgerAPI\\GoodHamburgerAPI\\GoodHamburger.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gmede\\.nuget\\packages\\automapper\\16.1.1\\automapper.16.1.1.nupkg.sha512",
     "C:\\Users\\gmede\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",

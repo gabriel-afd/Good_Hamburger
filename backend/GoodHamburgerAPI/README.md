@@ -43,6 +43,11 @@ cd good-hamburger
 }
 ```
 
+Logue no SQLServer da forma:
+
+![SQLServer](imagens/sql_server.png)
+
+
 **3. Aplique as migrations (cria o banco e popula o seed automaticamente):**
 ```bash
 dotnet ef migrations add InitialMigration --project GoodHamburger.Infra.Data --startup-project GoodHamburgerAPI
@@ -52,19 +57,23 @@ dotnet ef database update --project GoodHamburger.Infra.Data --startup-project G
 ```
 
 **4. Rode a API:**
+No projeto GoodHamburger.API abra um terminal e execute:
 ```bash
-dotnet run --project GoodHamburger.API
+dotnet run  
 ```
 
 **5. Acesse o Swagger:**
+Verifique a porta que o seu projeto está rodando e altera a porta:
 ```
-https://localhost:{porta}/swagger
+http://localhost:{porta}/swagger
+
+Exemplo: http://localhost:5247/swagger
 ```
 
 ### Frontend
 
+Abra o projeto e execute
 ```bash
-cd good-hamburger-front
 npm install
 ng serve
 ```
@@ -73,6 +82,7 @@ Acesse em `http://localhost:4200`.
 
 ### Testes
 
+Abra um terminal no projeto GoodHamburger.Tests e execute:
 ```bash
 dotnet test
 ```

@@ -9618,9 +9618,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\GoodHamburger\\backend\\GoodHamburgerAPI\\GoodHamburgerAPI\\GoodHamburgerAPI.csproj",
-      "projectName": "GoodHamburgerAPI",
-      "projectPath": "F:\\GoodHamburger\\backend\\GoodHamburgerAPI\\GoodHamburgerAPI\\GoodHamburgerAPI.csproj",
+      "projectUniqueName": "F:\\GoodHamburger\\backend\\GoodHamburgerAPI\\GoodHamburgerAPI\\GoodHamburger.API.csproj",
+      "projectName": "GoodHamburger.API",
+      "projectPath": "F:\\GoodHamburger\\backend\\GoodHamburgerAPI\\GoodHamburgerAPI\\GoodHamburger.API.csproj",
       "packagesPath": "C:\\Users\\gmede\\.nuget\\packages\\",
       "outputPath": "F:\\GoodHamburger\\backend\\GoodHamburgerAPI\\GoodHamburgerAPI\\obj\\",
       "projectStyle": "PackageReference",

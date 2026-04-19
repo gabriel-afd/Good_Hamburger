@@ -40,7 +40,7 @@
               "RelativeDocumentMoniker": "GoodHamburger.Application\\Services\\OrderService.cs",
               "ToolTip": "F:\\GoodHamburger\\backend\\GoodHamburgerAPI\\GoodHamburger.Application\\Services\\OrderService.cs",
               "RelativeToolTip": "GoodHamburger.Application\\Services\\OrderService.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-19T13:00:57.771Z",
               "EditorCaption": ""
@@ -55,7 +55,8 @@
               "RelativeToolTip": "GoodHamburger.Domain\\Strategies\\DiscountStrategyResolver.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-19T12:53:07.97Z"
+              "WhenOpened": "2026-04-19T12:53:07.97Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -65,9 +66,10 @@
               "RelativeDocumentMoniker": "GoodHamburger.Domain\\Factory\\OrderFactory.cs",
               "ToolTip": "F:\\GoodHamburger\\backend\\GoodHamburgerAPI\\GoodHamburger.Domain\\Factory\\OrderFactory.cs",
               "RelativeToolTip": "GoodHamburger.Domain\\Factory\\OrderFactory.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACMAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwCMAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-19T12:50:21.352Z"
+              "WhenOpened": "2026-04-19T12:50:21.352Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -79,7 +81,8 @@
               "RelativeToolTip": "GoodHamburger.Infra.Data\\Seed\\MenuItemSeed.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-19T12:46:06.768Z"
+              "WhenOpened": "2026-04-19T12:46:06.768Z",
+              "EditorCaption": ""
             }
           ]
         }
