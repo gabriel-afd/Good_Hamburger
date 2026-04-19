@@ -40,7 +40,7 @@
               "RelativeDocumentMoniker": "GoodHamburger.Application\\Services\\OrderService.cs",
               "ToolTip": "F:\\GoodHamburger\\backend\\GoodHamburgerAPI\\GoodHamburger.Application\\Services\\OrderService.cs",
               "RelativeToolTip": "GoodHamburger.Application\\Services\\OrderService.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-19T13:00:57.771Z",
               "EditorCaption": ""
@@ -55,8 +55,7 @@
               "RelativeToolTip": "GoodHamburger.Domain\\Strategies\\DiscountStrategyResolver.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-19T12:53:07.97Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-19T12:53:07.97Z"
             },
             {
               "$type": "Document",
@@ -68,8 +67,7 @@
               "RelativeToolTip": "GoodHamburger.Domain\\Factory\\OrderFactory.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAACMAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-19T12:50:21.352Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-19T12:50:21.352Z"
             },
             {
               "$type": "Document",
@@ -81,8 +79,7 @@
               "RelativeToolTip": "GoodHamburger.Infra.Data\\Seed\\MenuItemSeed.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-19T12:46:06.768Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-19T12:46:06.768Z"
             }
           ]
         }

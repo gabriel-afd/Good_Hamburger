@@ -1,59 +1,118 @@
-# GoodHamburgerFront
+# GoodHamburger Front
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.19.
+Frontend da aplicação GoodHamburger desenvolvido com Angular 19. A interface concentra o fluxo de pedidos, permitindo listar, criar, editar e remover pedidos com cálculo de combos e descontos.
 
-## Development server
+## Stack utilizada
 
-To start a local development server, run:
+- Angular 19
+- Angular Material
+- RxJS
+- Signals
+- Reactive Forms
 
-```bash
-ng serve
-```
+## Bibliotecas principais
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+As dependências centrais do projeto incluem:
 
-## Code scaffolding
+- `@angular/core`, `@angular/router`, `@angular/forms`
+- `@angular/material` e `@angular/cdk`
+- `rxjs`
+- `@angular/ssr`
+- `express`
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Como rodar o projeto
 
-```bash
-ng generate component component-name
-```
+### Pré-requisitos
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- Node.js instalado
+- npm instalado
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+### Instalação
 
 ```bash
-ng test
+npm install
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+### Ambiente de desenvolvimento
 
 ```bash
-ng e2e
+npm start
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+O projeto sobe localmente em `http://localhost:4200`.
 
-## Additional Resources
+### Build
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```bash
+npm run build
+```
+
+## Estrutura do projeto
+
+```text
+src/
+	app/
+		core/
+			services/
+				menu-item.service.ts
+				order.service.ts
+		models/
+			menu-item.model.ts
+			order-item.model.ts
+			order.model.ts
+		pages/
+			orders/
+				orders.component.ts
+				orders.component.html
+				orders.component.scss
+		shared/
+			components/
+				order-dialog/
+					order-dialog.component.ts
+					order-dialog.component.html
+					order-dialog.component.scss
+		app.component.ts
+		app.config.ts
+		app.routes.server.ts
+	index.html
+	main.ts
+	main.server.ts
+	server.ts
+	styles.scss
+public/
+angular.json
+package.json
+```
+
+## Organização da aplicação
+
+- `core/services`: serviços responsáveis pela comunicação e regras de acesso aos dados de menu e pedidos.
+- `models`: contratos e tipagens da aplicação.
+- `pages/orders`: página principal de gerenciamento de pedidos.
+- `shared/components/order-dialog`: modal reutilizável para criação e edição de pedidos.
+- `styles.scss`: estilos globais e customizações visuais.
+
+## Como as libs são usadas no projeto
+
+### Angular Material
+
+Usado na composição da interface com componentes como diálogo, botões, cards, chips, ícones, snackbars, tooltips e spinner de carregamento.
+
+### RxJS
+
+Usado principalmente nos fluxos assíncronos dos serviços e nas subscriptions para carregamento, criação, edição e remoção de pedidos.
+
+### Signals
+
+Usado para estado local dos componentes, incluindo listas, loading, itens selecionados e valores derivados como subtotal, desconto e total.
+
+### Reactive Forms
+
+Usado no modal de pedidos para montar e controlar o formulário de criação e edição de pedidos.
+
+## Scripts disponíveis
+
+- `npm start`: inicia o servidor de desenvolvimento.
+- `npm run build`: gera a build da aplicação.
+- `npm run watch`: gera build em modo watch.
+

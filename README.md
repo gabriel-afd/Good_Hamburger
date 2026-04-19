@@ -1,4 +1,4 @@
-# 🍔 Good Hamburger API
+# Good Hamburger API
 
 API REST para gerenciamento de pedidos da lanchonete **Good Hamburger**, desenvolvida em C# com .NET 8, seguindo os princípios de **Clean Architecture**, **Rich Domain Model** e **Design Patterns** (Strategy e Factory).
 
@@ -346,3 +346,187 @@ O cardápio é fixo e populado automaticamente via seed ao rodar as migrations.
   ]
 }
 ```
+
+---
+ 
+### Testando os endpoints via Swagger
+ 
+#### GET /api/Menu — listar cardápio
+Sem parâmetros. Clique em **Execute** direto.
+ 
+Resposta esperada: lista com os 5 itens do cardápio.
+ 
+---
+ 
+#### GET /api/Orders — listar todos os pedidos
+Sem parâmetros. Clique em **Execute** direto.
+ 
+Resposta esperada: lista de pedidos com subtotal, desconto e total calculados.
+ 
+---
+ 
+#### POST /api/Orders — criar pedido
+Clique em **Try it out**, cole um dos JSONs abaixo no body e clique em **Execute**.
+ 
+**Exemplo — combo completo (20%):**
+```json
+{
+  "menuItemIds": [
+    "11111111-0000-0000-0000-000000000003",
+    "22222222-0000-0000-0000-000000000001",
+    "33333333-0000-0000-0000-000000000001"
+  ]
+}
+```
+Resposta esperada: `201 Created` com `discountPercentage: 0.2`, `discount: 2.3`, `total: 9.2`.
+ 
+**Exemplo — erro de item duplicado:**
+```json
+{
+  "menuItemIds": [
+    "11111111-0000-0000-0000-000000000001",
+    "11111111-0000-0000-0000-000000000003"
+  ]
+}
+```
+Resposta esperada: `400 Bad Request` com mensagem clara sobre item duplicado.
+ 
+---
+ 
+#### GET /api/Orders/{id} — buscar pedido por ID
+1. Rode o `GET /api/Orders` primeiro e copie um `id` da resposta
+2. Cole o `id` no campo `id` do `GET /api/Orders/{id}`
+3. Clique em **Execute**
+Resposta esperada: `200 OK` com os dados do pedido.
+ 
+**Exemplo de ID inválido para testar o 404:**
+```
+00000000-0000-0000-0000-000000000000
+```
+Resposta esperada: `404 Not Found` com mensagem de pedido não encontrado.
+ 
+---
+ 
+#### PUT /api/Orders/{id} — atualizar pedido
+1. Rode o `GET /api/Orders` e copie um `id`
+2. Cole o `id` no campo `id`
+3. Cole o JSON abaixo no body (altera para só sanduíche, removendo o desconto)
+```json
+{
+  "menuItemIds": [
+    "11111111-0000-0000-0000-000000000001"
+  ]
+}
+```
+Resposta esperada: `200 OK` com `discountPercentage: 0`, `discount: 0`, `total: 5.0`.
+ 
+**Outro exemplo — atualiza para sanduíche + refrigerante (15%):**
+```json
+{
+  "menuItemIds": [
+    "11111111-0000-0000-0000-000000000002",
+    "33333333-0000-0000-0000-000000000001"
+  ]
+}
+```
+Resposta esperada: `200 OK` com `discountPercentage: 0.15`, `total: 5.95`.
+ 
+---
+ 
+#### DELETE /api/Orders/{id} — excluir pedido
+1. Rode o `GET /api/Orders` e copie um `id`
+2. Cole o `id` no campo `id`
+3. Clique em **Execute**
+Resposta esperada: `204 No Content`.
+ 
+**Exemplo de ID inexistente para testar o 404:**
+```
+00000000-0000-0000-0000-000000000000
+```
+Resposta esperada: `404 Not Found`.
+
+### Testando validações e erros via Swagger
+ 
+Todos os erros retornam JSON com a chave `error` e uma mensagem clara — sem stack trace exposto.
+ 
+#### 1. Item duplicado no pedido — `400 Bad Request`
+ 
+Tente criar um pedido com dois sanduíches:
+ 
+`POST /api/Orders`
+```json
+{
+  "menuItemIds": [
+    "11111111-0000-0000-0000-000000000001",
+    "11111111-0000-0000-0000-000000000003"
+  ]
+}
+```
+ 
+Resposta esperada:
+```json
+{
+  "error": "O pedido já contém um item do tipo 'Sandwich'. Cada pedido pode ter apenas um sanduíche, uma batata e um refrigerante."
+}
+```
+ 
+Funciona da mesma forma para duplicatas de batata e refrigerante.
+ 
+---
+ 
+#### 2. Pedido vazio — `400 Bad Request`
+ 
+Tente criar um pedido sem nenhum item:
+ 
+`POST /api/Orders`
+```json
+{
+  "menuItemIds": []
+}
+```
+ 
+Resposta esperada:
+```json
+{
+  "error": "O pedido deve conter pelo menos um item."
+}
+```
+ 
+---
+ 
+#### 3. Item do cardápio inexistente — `400 Bad Request`
+ 
+Tente criar um pedido com um ID que não existe no cardápio:
+ 
+`POST /api/Orders`
+```json
+{
+  "menuItemIds": [
+    "00000000-0000-0000-0000-000000000000"
+  ]
+}
+```
+ 
+Resposta esperada:
+```json
+{
+  "error": "Item do cardápio com ID '00000000-0000-0000-0000-000000000000' não encontrado."
+}
+```
+ 
+---
+ 
+#### 4. Pedido não encontrado — `404 Not Found`
+ 
+Tente buscar, atualizar ou excluir um pedido com ID inexistente.
+ 
+`GET /api/Orders/00000000-0000-0000-0000-000000000000`
+ 
+Resposta esperada:
+```json
+{
+  "error": "Pedido com ID '00000000-0000-0000-0000-000000000000' não encontrado."
+}
+```
+ 
+O mesmo erro ocorre no `PUT` e no `DELETE` com ID inexistente.
