@@ -50,7 +50,20 @@ namespace GoodHamburger.Infra.Data.Repositories
 
         public async Task UpdateAsync(Order order)
         {
-            _context.Orders.Update(order);
+            var existingItems = await _context.OrderItems
+                .Where(i => i.OrderId == order.Id)
+                .ToListAsync();
+
+            _context.OrderItems.RemoveRange(existingItems);
+
+            await _context.Orders
+                .Where(o => o.Id == order.Id)
+                .ExecuteUpdateAsync(o => o
+                .SetProperty(x => x.DiscountPercentage, order.DiscountPercentage)
+                .SetProperty(x => x.UpdatedAt, order.UpdatedAt));
+
+            await _context.OrderItems.AddRangeAsync(order.Items);
+
             await _context.SaveChangesAsync();
         }
     }

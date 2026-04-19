@@ -2462,11 +2462,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\GoodHamburger\\GoodHamburgerAPI\\GoodHamburger.Infra.IoC\\GoodHamburger.Infra.IoC.csproj",
+      "projectUniqueName": "F:\\GoodHamburger\\backend\\GoodHamburgerAPI\\GoodHamburger.Infra.IoC\\GoodHamburger.Infra.IoC.csproj",
       "projectName": "GoodHamburger.Infra.IoC",
-      "projectPath": "F:\\GoodHamburger\\GoodHamburgerAPI\\GoodHamburger.Infra.IoC\\GoodHamburger.Infra.IoC.csproj",
+      "projectPath": "F:\\GoodHamburger\\backend\\GoodHamburgerAPI\\GoodHamburger.Infra.IoC\\GoodHamburger.Infra.IoC.csproj",
       "packagesPath": "C:\\Users\\gmede\\.nuget\\packages\\",
-      "outputPath": "F:\\GoodHamburger\\GoodHamburgerAPI\\GoodHamburger.Infra.IoC\\obj\\",
+      "outputPath": "F:\\GoodHamburger\\backend\\GoodHamburgerAPI\\GoodHamburger.Infra.IoC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2488,14 +2488,14 @@
           "framework": "net8.0",
           "targetAlias": "net8.0",
           "projectReferences": {
-            "F:\\GoodHamburger\\GoodHamburgerAPI\\GoodHamburger.Application\\GoodHamburger.Application.csproj": {
-              "projectPath": "F:\\GoodHamburger\\GoodHamburgerAPI\\GoodHamburger.Application\\GoodHamburger.Application.csproj"
+            "F:\\GoodHamburger\\backend\\GoodHamburgerAPI\\GoodHamburger.Application\\GoodHamburger.Application.csproj": {
+              "projectPath": "F:\\GoodHamburger\\backend\\GoodHamburgerAPI\\GoodHamburger.Application\\GoodHamburger.Application.csproj"
             },
-            "F:\\GoodHamburger\\GoodHamburgerAPI\\GoodHamburger.Domain\\GoodHamburger.Domain.csproj": {
-              "projectPath": "F:\\GoodHamburger\\GoodHamburgerAPI\\GoodHamburger.Domain\\GoodHamburger.Domain.csproj"
+            "F:\\GoodHamburger\\backend\\GoodHamburgerAPI\\GoodHamburger.Domain\\GoodHamburger.Domain.csproj": {
+              "projectPath": "F:\\GoodHamburger\\backend\\GoodHamburgerAPI\\GoodHamburger.Domain\\GoodHamburger.Domain.csproj"
             },
-            "F:\\GoodHamburger\\GoodHamburgerAPI\\GoodHamburger.Infra.Data\\GoodHamburger.Infra.Data.csproj": {
-              "projectPath": "F:\\GoodHamburger\\GoodHamburgerAPI\\GoodHamburger.Infra.Data\\GoodHamburger.Infra.Data.csproj"
+            "F:\\GoodHamburger\\backend\\GoodHamburgerAPI\\GoodHamburger.Infra.Data\\GoodHamburger.Infra.Data.csproj": {
+              "projectPath": "F:\\GoodHamburger\\backend\\GoodHamburgerAPI\\GoodHamburger.Infra.Data\\GoodHamburger.Infra.Data.csproj"
             }
           }
         }

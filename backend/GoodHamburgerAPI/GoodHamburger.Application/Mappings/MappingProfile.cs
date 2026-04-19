@@ -19,7 +19,7 @@ namespace GoodHamburger.Application.Mappings
             CreateMap<Order, OrderResponse>()
                 .ForMember(dest => dest.Subtotal, opt => opt.MapFrom(src => src.GetSubtotal()))
                 .ForMember(dest => dest.Discount, opt => opt.MapFrom(src => src.GetDiscount()))
-                .ForMember(dest => dest.DiscountPercentage, opt => opt.MapFrom(src => src.GetDiscountPercentage()))
+                .ForMember(dest => dest.DiscountPercentage, opt => opt.MapFrom(src => src.DiscountPercentage))
                 .ForMember(dest => dest.Total, opt => opt.MapFrom(src => src.GetTotal()));
         }
     }

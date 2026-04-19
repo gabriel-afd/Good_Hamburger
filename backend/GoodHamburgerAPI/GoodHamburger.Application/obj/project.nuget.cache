@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "e9RmXVwNEZw=",
+  "dgSpecHash": "XYpRnmmeT2w=",
   "success": true,
-  "projectFilePath": "F:\\GoodHamburger\\GoodHamburgerAPI\\GoodHamburger.Application\\GoodHamburger.Application.csproj",
+  "projectFilePath": "F:\\GoodHamburger\\backend\\GoodHamburgerAPI\\GoodHamburger.Application\\GoodHamburger.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gmede\\.nuget\\packages\\automapper\\16.1.1\\automapper.16.1.1.nupkg.sha512",
     "C:\\Users\\gmede\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\10.0.6\\microsoft.extensions.dependencyinjection.10.0.6.nupkg.sha512",

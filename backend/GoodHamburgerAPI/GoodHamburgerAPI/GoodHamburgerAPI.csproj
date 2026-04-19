@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\GoodHamburger.Infra.IoC\GoodHamburger.Infra.IoC.csproj" />
+    <ProjectReference Include="..\GoodHamburger.Tests\GoodHamburger.Tests.csproj" />
   </ItemGroup>
 
 </Project>

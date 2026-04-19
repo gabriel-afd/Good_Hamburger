@@ -1,0 +1,80 @@
+<div class="page-container">
+
+  <div class="page-header">
+    <div class="page-header-title">
+      <h1>Good Hamburger</h1>
+      <span class="subtitle">Gerenciamento de pedidos</span>
+    </div>
+    <button mat-flat-button color="warn" (click)="openCreateDialog()">
+      <mat-icon>add</mat-icon>
+      Novo pedido
+    </button>
+  </div>
+
+  @if (loading()) {
+    <div class="loading-wrapper">
+      <mat-spinner diameter="48" />
+    </div>
+  } @else if (orders().length === 0) {
+    <div class="empty-state">
+      <mat-icon>receipt</mat-icon>
+      <p>Nenhum pedido encontrado.</p>
+      <button mat-stroked-button color="warn" (click)="openCreateDialog()">Criar primeiro pedido</button>
+    </div>
+  } @else {
+    <div class="orders-list">
+      @for (order of orders(); track order.id) {
+        <mat-card class="order-card">
+          <mat-card-header>
+            <div class="order-header">
+              <div>
+                <p class="order-id">Pedido #{{ order.id.slice(0, 8).toUpperCase() }}</p>
+                <p class="order-date">{{ order.createdAt | date:'dd/MM/yyyy · HH:mm' }}</p>
+              </div>
+              <span class="discount-badge" [class]="discountColor(order)">
+                {{ discountLabel(order) }}
+              </span>
+            </div>
+          </mat-card-header>
+
+          <mat-card-content>
+            <div class="items-row">
+              @for (item of order.items; track item.id) {
+                <mat-chip>{{ item.menuItemName }}</mat-chip>
+              }
+            </div>
+
+            <div class="order-footer">
+              <div class="prices">
+                <div class="price-item">
+                  <span class="price-label">Subtotal</span>
+                  <span class="price-value">{{ order.subtotal | currency:'BRL':'symbol':'1.2-2':'pt-BR' }}</span>
+                </div>
+                @if (order.discount > 0) {
+                  <div class="price-item">
+                    <span class="price-label">Desconto</span>
+                    <span class="price-value discount">- {{ order.discount | currency:'BRL':'symbol':'1.2-2':'pt-BR' }}</span>
+                  </div>
+                }
+                <div class="price-item">
+                  <span class="price-label">Total</span>
+                  <span class="price-value total">{{ order.total | currency:'BRL':'symbol':'1.2-2':'pt-BR' }}</span>
+                </div>
+              </div>
+
+              <div class="actions">
+                <button mat-stroked-button (click)="openEditDialog(order)" matTooltip="Editar pedido">
+                  <mat-icon>edit</mat-icon>
+                </button>
+                <button mat-stroked-button color="warn" (click)="deleteOrder(order)" matTooltip="Excluir pedido">
+                  <mat-icon>delete</mat-icon>
+                </button>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      }
+    </div>
+  }
+
+</div>

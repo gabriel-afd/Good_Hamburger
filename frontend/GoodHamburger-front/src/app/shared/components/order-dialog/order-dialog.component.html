@@ -1,0 +1,73 @@
+<h2 mat-dialog-title>{{ title() }}</h2>
+
+<mat-dialog-content>
+  @if (loading()) {
+    <div style="display: flex; justify-content: center; padding: 2rem;">
+      <mat-spinner diameter="36" />
+    </div>
+  } @else {
+    <form [formGroup]="form">
+
+      <!-- Sanduíches -->
+      <p class="section-label">Sanduíche</p>
+      @for (item of sandwiches(); track item.id) {
+        <div class="menu-item" [ngClass]="{ selected: isSelected(item.id) }" (click)="toggleItem(item)">
+          <div class="menu-item-info">
+            <span class="menu-item-name">{{ item.name }}</span>
+            <span class="menu-item-price">{{ item.price | currency:'BRL':'symbol':'1.2-2':'pt-BR' }}</span>
+          </div>
+          <div class="check-circle" [ngClass]="{ checked: isSelected(item.id) }"></div>
+        </div>
+      }
+
+      <mat-divider style="margin: 12px 0;" />
+
+      <!-- Acompanhamentos -->
+      <p class="section-label">Acompanhamentos</p>
+      @for (item of sides(); track item.id) {
+        <div class="menu-item" [ngClass]="{ selected: isSelected(item.id) }" (click)="toggleItem(item)">
+          <div class="menu-item-info">
+            <span class="menu-item-name">{{ item.name }}</span>
+            <span class="menu-item-price">{{ item.price | currency:'BRL':'symbol':'1.2-2':'pt-BR' }}</span>
+          </div>
+          <div class="check-circle" [ngClass]="{ checked: isSelected(item.id) }"></div>
+        </div>
+      }
+
+      <!-- Preview de desconto em tempo real -->
+      @if (discountLabel()) {
+        <div class="discount-preview">
+          <span>{{ discountLabel() }}</span>
+        </div>
+      }
+
+      <!-- Resumo de valores -->
+      @if (selectedItems().length > 0) {
+        <div class="summary">
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span>{{ subtotal() | currency:'BRL':'symbol':'1.2-2':'pt-BR' }}</span>
+          </div>
+          @if (discount() > 0) {
+            <div class="summary-row discount">
+              <span>Desconto</span>
+              <span>- {{ discount() | currency:'BRL':'symbol':'1.2-2':'pt-BR' }}</span>
+            </div>
+          }
+          <div class="summary-row total">
+            <span>Total</span>
+            <span>{{ total() | currency:'BRL':'symbol':'1.2-2':'pt-BR' }}</span>
+          </div>
+        </div>
+      }
+
+    </form>
+  }
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button (click)="cancel()">Cancelar</button>
+  <button mat-flat-button color="warn" [disabled]="selectedIds().length === 0" (click)="confirm()">
+    {{ isEditMode() ? 'Salvar alterações' : 'Confirmar pedido' }}
+  </button>
+</mat-dialog-actions>

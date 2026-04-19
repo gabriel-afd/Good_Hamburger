@@ -3,5 +3,6 @@
   <Project Path="GoodHamburger.Domain/GoodHamburger.Domain.csproj" />
   <Project Path="GoodHamburger.Infra.Data/GoodHamburger.Infra.Data.csproj" />
   <Project Path="GoodHamburger.Infra.IoC/GoodHamburger.Infra.IoC.csproj" />
+  <Project Path="GoodHamburger.Tests/GoodHamburger.Tests.csproj" Id="cc897b89-5452-4c24-80bf-73bd28fe1e73" />
   <Project Path="GoodHamburgerAPI/GoodHamburgerAPI.csproj" />
 </Solution>

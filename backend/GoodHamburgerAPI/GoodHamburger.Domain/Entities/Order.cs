@@ -6,6 +6,7 @@ namespace GoodHamburger.Domain.Entities
     public class Order
     {
         public Guid Id { get; set; }
+        public decimal DiscountPercentage { get; private set; }
         public DateTime CreatedAt { get; private set; }
         public DateTime? UpdatedAt { get; private set; }
 
@@ -13,15 +14,13 @@ namespace GoodHamburger.Domain.Entities
         private readonly List<OrderItem> _items = new();
         public IReadOnlyList<OrderItem> Items => _items.AsReadOnly();
 
-        private IDiscountStrategy _discountStrategy;
+        private Order() {}
 
-        private Order() { _discountStrategy = new NoDiscountStrategy(); }
-
-        public Order(IDiscountStrategy initialStrategy)
+        public Order(IDiscountStrategy strategy)
         {
             Id = Guid.NewGuid();
             CreatedAt = DateTime.UtcNow;
-            _discountStrategy = initialStrategy;
+            DiscountPercentage = strategy.DiscountPercentage;
         }
 
         public void AddItem(OrderItem item)
@@ -42,16 +41,16 @@ namespace GoodHamburger.Domain.Entities
             foreach (var item in newItems)
                 AddItem(item);
 
-            _discountStrategy = newStrategy;
+            DiscountPercentage = newStrategy.DiscountPercentage;
             UpdatedAt = DateTime.UtcNow;
         }
 
         public decimal GetSubtotal() => _items.Sum(i => i.MenuItem.Price);
 
-        public decimal GetDiscount() => Math.Round(GetSubtotal() * _discountStrategy.DiscountPercentage, 2);
+        public decimal GetDiscount() => Math.Round(GetSubtotal() * DiscountPercentage, 2);
 
         public decimal GetTotal() => GetSubtotal() - GetDiscount();
 
-        public decimal GetDiscountPercentage() => _discountStrategy.DiscountPercentage;
+        public decimal GetDiscountPercentage() => DiscountPercentage;
     }
 }
