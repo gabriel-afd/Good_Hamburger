@@ -45,13 +45,10 @@ cd good-hamburger
 
 **3. Aplique as migrations (cria o banco e popula o seed automaticamente):**
 ```bash
-dotnet ef migrations add InitialCreate \
-  --project GoodHamburger.Infra.Data \
-  --startup-project GoodHamburger.API
+dotnet ef migrations add InitialMigration --project GoodHamburger.Infra.Data --startup-project GoodHamburgerAPI
 
-dotnet ef database update \
-  --project GoodHamburger.Infra.Data \
-  --startup-project GoodHamburger.API
+dotnet ef database update --project GoodHamburger.Infra.Data --startup-project GoodHamburgerAPI
+
 ```
 
 **4. Rode a API:**
@@ -97,6 +94,19 @@ GoodHamburger.sln
 └── tests/
     └── GoodHamburger.Tests         # Testes unitários
 ```
+
+Motivos da Escolha da Clean Architecture:
+
+- Testabilidade — é possível testar as regras de desconto com xUnit sem subir banco ou sem HTTP. Só é necessário instanciar as classes e testar. Isso só é possível porque o Domain é C# puro.
+
+- Troca de tecnologia — se for necessário trocar SQL Server por PostgreSQL, basta mudar o provider no Infra.Data e a connection string. O Domain e a Application não tocam.
+
+- Responsabilidade clara — quando um bug aparece, é possível saber exatamente onde olhar. Erro de cálculo de desconto? Domain. Erro de persistência? Infra.Data. Erro na resposta HTTP? API
+
+- Manutenção — um desenvolvedor novo no projeto consegue entender a estrutura rapidamente. Cada camada tem um contrato claro com a próxima via interfaces.
+
+- Crescimento da aplicação — a medida que novas funcionalidades vão sendo implementadas a aplicação vai aumentando de tamanho e faz-se necessário adotar um modelo de arquitetura mais planejado. Tal modelo, 
+já foi adotado no projeto desde o começo da concepção
 
 ### Domain
 Núcleo da aplicação — sem dependência de nenhuma outra camada.
