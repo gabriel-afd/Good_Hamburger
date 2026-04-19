@@ -251,22 +251,6 @@ AutoMapper → OrderResponse
 
 ![Fluxo de Criação de Pedido](iamgens/fluxo_post.png)
 
-### Por que não há redundância no `OrderService`?
-
-O `CreateAsync` é apenas o orquestrador — não tem regra de negócio:
-
-```csharp
-public async Task<OrderResponse> CreateAsync(CreateOrderRequest request)
-{
-    var itemData = await ResolveMenuItemsAsync(request.MenuItemIds); // busca os MenuItems
-    var order = _orderFactory.Create(itemData);                      // factory cuida de tudo
-    await _orderRepository.AddAsync(order);                          // persiste
-    return _mapper.Map<OrderResponse>(order);                        // mapeia
-}
-```
-
-Cada responsabilidade está em seu lugar: regras de negócio no Domain, persistência no Repositório, mapeamento no AutoMapper.
-
 ---
 
 ## Tratamento de exceções
