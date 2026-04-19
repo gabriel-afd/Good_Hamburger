@@ -249,7 +249,7 @@ AutoMapper → OrderResponse
 201 Created
 ```
 
-![Fluxo de Criação de Pedido](iamgens/fluxo_post.png)
+![Fluxo de Criação de Pedido](imagens/fluxo_post.png)
 
 ---
 
